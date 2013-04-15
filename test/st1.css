@@ -1,0 +1,51 @@
+.menuBar ul{
+background-color:#pink;
+list-style:none;
+margin:0px;
+padding:0px;
+width:800px;
+}
+.menuBar ul li{
+display:inline;
+position:relative;
+float:left;
+background-color:#898;
+width:80px;
+white-space:normal;    /*or nowrap*/
+text-align:auto;
+border-bottom:1px solid #fff;
+}
+.menuBar ul li ul{
+display:none;
+position:absolute;
+border-top:1px solid #ccc;
+}
+.menuBar ul li:hover > ul{
+display:block;
+width:100%;
+background-color:#898;
+z-index:1;
+}
+.menuBar ul li ul li{
+
+padding-top:3px;
+white-space:line-wrap;
+background-color:#898;
+}
+.menuBar ul li ul li ul{
+display:none;
+position:absolute;
+left:100%;
+border-right:1px solid #fff;
+top:0px;
+border-left:2px solid #fff;
+}
+img{
+position:relative;;
+width:100%;
+height:300px;
+border-top:1px solid #fff;
+}
+.menuBar ul li:hover{
+background-color:#777;
+}

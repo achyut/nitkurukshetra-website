@@ -305,6 +305,33 @@ a{
 #news a{
 
 }
+.sideNav{
+	padding-top:50px;
+	
+}
+.sideNav li{
+	margin-top:8px;
+}
+.sideBar{
+	width:20%;
+	background:#CCC;	
+	float:left;	
+}
+.mainContent{
+	padding:10px;
+	float:left;
+	width:75%;
+	color:#000;
+
+}
+.mainContent p{
+	font-family: 'Sintony', sans-serif;
+	font-size:.9em;
+	text-align:justify;
+}
+.mainContent h1{
+	font-size:1.7em;
+}
 .clear{
 	clear:both;
 }
@@ -314,6 +341,12 @@ a{
 	height:50px;
 	color:#fff;
 	text-align:center;
+}
+.success{
+	color:green;
+}
+.error{
+	color:red;
 }
 .footer a{
 	color:#fff;

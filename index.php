@@ -8,7 +8,7 @@
 		<img src="images/NIT_KURUKSHETRA_05.jpg" />
 		
 	</div>
-	
+
 	<div class="belowContainer">
 			<div class="marquee centerBox"><span class="latestText">HAPPENING NOW:</span>
 			<ul class="marqueeNews">
@@ -29,12 +29,13 @@
 			<li>
 			<span class="topicTitle">FORTH COMING EVENTS</span>
 			<ul class="belowContent">
-				<li><a href="#">Event1</a></li>
-				<li><a href="#">Event1</a></li>
+				<li><a href="#">"E-Sumit'13"</a></li>
+				<li><a href="#">Tribology</a></li>
 				<li><a href="#">Event1</a></li>
 				<li><a href="#">Event1</a></li>
 				<li><a href="#">Event1</a></li>
 			</ul>
+			<span class="readMore">All Events</span>
 			</li>
 			
 			<li>
@@ -46,6 +47,7 @@
 				<li><a href="#">Event1</a></li>
 				<li><a href="#">Event1</a></li>
 			</ul>
+			<span class="readMore">All Notics</span>
 			</li>
 			<li>
 			
@@ -57,6 +59,7 @@
 				<li><a href="#">Event1</a></li>
 				<li><a href="#">Event1</a></li>
 			</ul>
+			<span class="readMore">All Activities</span>
 			</li>
 			
 			<li id="news">
@@ -74,6 +77,7 @@
 				<li><a href="#">Event9</a></li>
 				<li><a href="#">Event10</a></li>																				
 			</ul>
+			<span class="readMore floated">All News</span>
 			</li>
 		</ul>
 	</div>

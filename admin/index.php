@@ -17,5 +17,5 @@
 		</div>
 	</div>
 <?php
-	include("../template/footer.php");
+	include("../template/adminfooter.php");
 ?>

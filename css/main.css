@@ -6,8 +6,10 @@ body{
 	font-family:'strait';
 	background: -moz-linear-gradient(center top , #333333 0%, #2B2B2B 100%) repeat scroll 0 0 transparent;
 }
-a{
+a,a img{
 	color:#510101;
+	border:none;
+	outline:none;
 }
 .mainBody{
   /* testing the changes */
@@ -27,7 +29,7 @@ a{
 }
 .englishTitle{
 	word-spacing:.3em;
-	font-weight:bold;
+	font-weight:bold;a
 }
 .hindiTitle{
 	font:1.2em 'gargi';
@@ -381,4 +383,9 @@ ul#menu > li ul li
 }
 .footer a{
 	color:#fff;
+}
+
+.noticeList{
+	list-style-type:square;
+	color:green;
 }

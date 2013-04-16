@@ -7,5 +7,5 @@
 </body>
 </html>
 <?php
-mysqli_close($link);
+mysql_close($link);
 ?>

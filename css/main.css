@@ -224,7 +224,6 @@ ul#menu > li ul li
 }
 .belowContainer{
 	background:#fff;
-
 	display:inline-block;
 	width:100%;
 	padding-bottom:30px;
@@ -236,6 +235,10 @@ ul#menu > li ul li
 	font-size:.8em;
 	background:#ccc;
 	color:#000;
+}
+.newsFloat{
+	position:absolute;
+	bottom:0;
 }
 .marquee{
 	padding:20px 0px 20px 0px;
@@ -288,8 +291,11 @@ ul#menu > li ul li
 	float:left;
 	list-style:none;
 	width:20%;
+	max-height:200px;
 }
 .belowContent{
+	max-height:150px;
+	overflow:hidden;
 	margin:0;
 	padding:0;
 	border:1px solid #ccc;
@@ -316,13 +322,16 @@ ul#menu > li ul li
 #news{
 	width:31.4%;
 	position:relative;
-	max-height:160px;
 	overflow:hidden;
+	max-height:205px;
 }
 #news li{
 	width:91%;
 	padding:2px;
 	border-bottom:1px solid #000;
+}
+#ticker{
+	max-height:250px;
 }
 #news a{
 

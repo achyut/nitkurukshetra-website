@@ -6,20 +6,13 @@
 		width:100%;
 	}
 	input[type=text]{width:100%;}
+	.side{
+		width:98%;
+	}
 </style>
 <script src="ckeditor/ckeditor.js"></script>
-	<link rel="stylesheet" href="sample.css">
 
-	<div class="belowContainer">
-		<div class="centerBox">
-			<div class="sideBar">
-				<ul class="sideNav">
-					<li><a href="#">Welcome!</a></li>	
-					<li><a href="#">Administrator</a></li>	
-				</ul>
-			</div> <!-- sidenav ends -->
-			<div class = "mainContent">
-			<?php
+<?php
 				$pageId=$_GET['pageId'];
 				$mode = $_GET['mode'];
 				$pageId = $_GET["page"];
@@ -51,19 +44,33 @@
 	
 				}
 			?>
-			
 			<form action="<?php if(!empty($pageId)){echo"edit.php";}else{echo"add.php";} ?>" method="POST">
+	<div class="belowContainer">
+		<div class="centerBox">
+			<div class="sideBar">
+				<ul class="sideNav">
+					<li><a href="#">Welcome!</a></li>	
+					<li><a href="#">Administrator</a></li>				
+				</ul>
+				&nbsp;&nbsp;Add links to the page<br/>
+				<input type="text" class="left" id="birds"/>
+			</div> <!-- sidenav ends -->
+			<div class = "mainContent">
+			
+			
+			
 					Page Title: <input type="text" name="title" value="<?php echo $pageTitle;?>"><br/>
 					Page Description:<textarea name="pageDesc"><?php echo$pageDesc;?></textarea><br/>
 					
 					<textarea class="ckeditor" id="editor1" name="editor1" rows="10"><?php echo$pageContent;?></textarea><br/>
 					<input type="submit" value="submit"/>
 					<input type="hidden" name="pageId" value="<?php echo $pageId;?>"/>
-			</form>
+			
 			
 			</div>
 		</div>
 	</div>
+	</form>
 <?php
 	include("../template/adminfooter.php");
 ?>

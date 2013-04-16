@@ -25,12 +25,17 @@
 			</ul>
 		</div>
 		
-		<ul class="belowTopics  centerBox">
+		<ul class="belowTopics centerBox">
 			<li>
 			<span class="topicTitle">FORTH COMING EVENTS</span>
 			<ul class="belowContent">
 				<li><a href="#">"E-Sumit'13"</a></li>
 				<li><a href="#">Tribology</a></li>
+				<li><a href="#">Event1</a></li>
+				<li><a href="#">Event1</a></li>
+				<li><a href="#">Event1</a></li>
+				<li><a href="#">Event1</a></li>
+				<li><a href="#">Event1</a></li>
 				<li><a href="#">Event1</a></li>
 				<li><a href="#">Event1</a></li>
 				<li><a href="#">Event1</a></li>
@@ -46,8 +51,13 @@
 				<li><a href="#">Event1</a></li>
 				<li><a href="#">Event1</a></li>
 				<li><a href="#">Event1</a></li>
+				<li><a href="#">Event1</a></li>
+				<li><a href="#">Event1</a></li>
+				<li><a href="#">Event1</a></li>
+				<li><a href="#">Event1</a></li>
+				<li><a href="#">Event1</a></li>
 			</ul>
-			<span class="readMore">All Notics</span>
+			<span class="readMore">All Notices</span>
 			</li>
 			<li>
 			
@@ -58,6 +68,12 @@
 				<li><a href="#">Event1</a></li>
 				<li><a href="#">Event1</a></li>
 				<li><a href="#">Event1</a></li>
+				<li><a href="#">Event1</a></li>
+				<li><a href="#">Event1</a></li>
+				<li><a href="#">Event1</a></li>
+				<li><a href="#">Event1</a></li>
+				<li><a href="#">Event1</a></li>
+				
 			</ul>
 			<span class="readMore">All Activities</span>
 			</li>
@@ -77,7 +93,7 @@
 				<li><a href="#">Event9</a></li>
 				<li><a href="#">Event10</a></li>																				
 			</ul>
-			<span class="readMore floated">All News</span>
+			<span class="readMore newsFloat">All News</span>
 			</li>
 		</ul>
 	</div>

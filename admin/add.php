@@ -14,7 +14,10 @@
 					$pageTitle = $_POST['title'];
 					$pageDesc = $_POST['pageDesc'];
 					$pageContent = $_POST['editor1'];
-					$query = "INSERT INTO pages (pageTitle,pageDesc,pageContent)VALUES ('$pageTitle', '$pageDesc','$pageContent')";
+					$pageLink = $_POST['pageLink'];
+					$template = $_POST['template'];
+					$pageLink = json_encode($pageLink);
+					$query = "INSERT INTO pages (pageTitle,pageDesc,pageContent,pageLink,template)VALUES ('$pageTitle', '$pageDesc','$pageContent','$pageLink','$template')";
 					$result = mysql_query($query);
 					if (!$result) {
 						die('Invalid query: ' . mysql_error());

@@ -74,6 +74,9 @@
 							case "interview":
 								updateData($type,"walkin",$title,$shTitle,"wlk_",$url,$id);
 								break;
+							case "scrollnews":
+								updateData($type,"scrollnews",$title,$shTitle,"scroll_",$url,$id);
+								break;
 							default:
 								printErrorMessage();
 						}	
@@ -97,6 +100,9 @@
 								break;
 							case "interview":
 								insertData($type,"walkin",$title,$shTitle,"wlk_",$url);
+								break;
+							case "scrollnews":
+								insertData($type,"scrollnews",$title,$shTitle,"scroll_",$url);
 								break;
 							default:
 								printErrorMessage();

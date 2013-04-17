@@ -60,6 +60,9 @@
 							case "interview":
 								$row = getData("walkin",$id,"wlk_");
 								break;
+							case "scrollnews":
+								$row = getData("scrollnews",$id,"scroll_");
+								break;
 							default:
 								printErrorMessage();
 						}

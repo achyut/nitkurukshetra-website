@@ -14,7 +14,7 @@
 					<a href="addpage.php?mode=add">Add new page</a><br/>
 			<?php
 			function getResults($type,$table,$scut){
-						$query = "SELECT * FROM ".$table." ORDER by ".$scut." DESC";
+						$query = "SELECT * FROM ".$table." ORDER by ".$scut."";
 						$result = mysql_query($query);
 						if (!$result) {
 							die('Invalid query: ' . mysql_error());
@@ -23,15 +23,15 @@
 						while ($row = mysql_fetch_array($result, MYSQL_NUM)) {
 							$id = $row[0];
 							$title = $row[1];
-						
-							echo "<li><a href='../institute.php?page=$id'>$title</a>&nbsp;&nbsp;<a href='addpage.php?mode=edit&&page=$id'><img src='../images/edit.png' /></a>&nbsp;&nbsp;<a href='deletenotice.php?id=$id&&type=page'><img src='../images/delete.png' /></a></li>";
+							$template = $row[5];
+							echo "<li><a href='../institute.php?page=$id'>$title</a>&nbsp;&nbsp;<a href='addpage.php?mode=edit&&page=$id&&template=$template'><img src='../images/edit.png' /></a>&nbsp;&nbsp;<a href='deletenotice.php?id=$id&&type=page'><img src='../images/delete.png' /></a></li>";
 						}
 						echo "</ul>";
 					}
 					
 			?>
 			<?php 
-			getResults("","pages","pageId");
+			getResults("","pages","pageTitle");
 			?>
 			</div>
 		</div>

@@ -13,54 +13,69 @@
 					<?php
 					$id = $_GET['id'];
 					$type = $_GET['type'];
-					switch($type){
-						case "event":
-							$table = "event";
-							$sht = "evnt_id";
-							break;
-						case "news":
-							$table = "news";
-							$sht = "news_id";
-							break;
-						case "notice":
-							$table = "notice";
-							$sht = "notice_id";
-							break;
-						case "stdact":
-							$table = "stdact";
-							$sht = "stdact_id";
-							break;
-						case "tender":
-							$table = "tender";
-							$sht = "tndr_id";							
-							break;
-						case "interview":
-							$table = "walkin";
-							$sht = "wlk_id";							
-							break;
-						case "page":
-							$table = "pages";
-							$sht = "pageId";
-							break;
-						default:
-							printErrorMessage();
-					}
+					$confirm = $_GET['confirm'];
+					if(!empty($confirm)){
+						switch($type){
+							case "event":
+								$table = "event";
+								$sht = "evnt_id";
+								break;
+							case "news":
+								$table = "news";
+								$sht = "news_id";
+								break;
+							case "notice":
+								$table = "notice";
+								$sht = "notice_id";
+								break;
+							case "stdact":
+								$table = "stdact";
+								$sht = "stdact_id";
+								break;
+							case "tender":
+								$table = "tender";
+								$sht = "tndr_id";							
+								break;
+							case "interview":
+								$table = "walkin";
+								$sht = "wlk_id";							
+								break;
+							case "scrollnews":
+								$table = "scrollnews";
+								$sht = "scroll_id";							
+								break;
+							case "page":
+								$table = "pages";
+								$sht = "pageId";
+								break;
+							default:
+								printErrorMessage();
+						}
 					
-					$query = "DELETE FROM ".$table." WHERE ".$sht."='".$id."'";
-					$result = mysql_query($query);
-					if (!$result) {
-						die('Invalid query: ' . mysql_error());
-					}
-					else{
-						echo "<h1><span class='success'>$type successfully Deleted.</span></h1>";
-						if($type=="page"){
-						echo "<a href='sitemap.php'>Show All $type</a><br/>";
+						$query = "DELETE FROM ".$table." WHERE ".$sht."='".$id."'";
+						$result = mysql_query($query);
+						if (!$result) {
+							die('Invalid query: ' . mysql_error());
 						}
 						else{
-						echo "<a href='notices.php?type=$type'>Show All $type</a><br/>";
+							echo "<h1><span class='success'>$type successfully Deleted.</span></h1>";
+							if($type=="page"){
+							echo "<a href='sitemap.php'>Show All $type</a><br/>";
+							}
+							else{
+							echo "<a href='notices.php?type=$type'>Show All $type</a><br/>";
+							}
+						
 						}
+					
+					}
+					else{
+						echo "<h1 class='error'>Do you want to delete this item??<h1>";
+						echo "<a href='deletenotice.php?id=$id&&type=$type&&confirm=yes'>Yes</a><br/><br/>";
+						echo "<a href='sitemap.php'>No</a><br/>";
 						
 					}
+					
 	
 					?>
 					

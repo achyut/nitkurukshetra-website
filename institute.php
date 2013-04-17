@@ -1,19 +1,39 @@
 <?php
 	include("template/header.php");
 ?>
+<?php
+		$mode = $_GET['mode'];
+		$pageId = $_GET["page"];
+		$data = showPageDetails($pageId);
+		$template = $data[5];
+	?>
 	<div class="belowContainer">
+		
 		<div class="centerBox">
-			<div class="sideBar">
-				<ul class="sideNav">
-					<li><a href="#">HOME</a></li>	
-					<li><a href="#">Institute - Industry Collaboration</a></li>	
-					<li><a href="#">HOME</a></li>	
-					<li><a href="#">HOME</a></li>	
-				</ul>
-			</div> <!-- sidenav ends -->
-			<div class = "mainContent">
-					<?php echo $pageContent; ?>
-			</div>
+			<?php 
+				if($template=="full"){
+					echo "<div class = 'mainContent fullContent'>";
+							echo $data[3];
+					echo "</div>";
+				}
+				else if($template =="profile"){
+				
+				}
+				else{
+					echo "<div class='sideBar'>";
+						echo"<ul class='sideNav'>";
+							displayPageTitle($data[4],$mode);
+						echo"</ul>";
+					echo"</div> <!-- sidenav ends -->	";
+					echo"<div class = 'mainContent'>";
+						echo $data[3];
+					echo"</div>";
+				}
+			?>
+			
+			
+			
+			
 		</div>
 	</div>
 <?php

@@ -29,71 +29,42 @@
 			<li>
 			<span class="topicTitle">FORTH COMING EVENTS</span>
 			<ul class="belowContent">
-				<li><a href="#">"E-Sumit'13"</a></li>
-				<li><a href="#">Tribology</a></li>
-				<li><a href="#">Event1</a></li>
-				<li><a href="#">Event1</a></li>
-				<li><a href="#">Event1</a></li>
-				<li><a href="#">Event1</a></li>
-				<li><a href="#">Event1</a></li>
-				<li><a href="#">Event1</a></li>
-				<li><a href="#">Event1</a></li>
-				<li><a href="#">Event1</a></li>
+				<?php
+					getResults("event","event","evnt_",5,"short");
+				?>
 			</ul>
-			<span class="readMore">All Events</span>
+			<span class="readMore"><a href="notices.php?type=event">All Events</a></span>
 			</li>
 			
 			<li>
 			<span class="topicTitle">NOTICES</span>
 			<ul class="belowContent">
-				<li><a href="#">Event1</a></li>
-				<li><a href="#">Event1</a></li>
-				<li><a href="#">Event1</a></li>
-				<li><a href="#">Event1</a></li>
-				<li><a href="#">Event1</a></li>
-				<li><a href="#">Event1</a></li>
-				<li><a href="#">Event1</a></li>
-				<li><a href="#">Event1</a></li>
-				<li><a href="#">Event1</a></li>
-				<li><a href="#">Event1</a></li>
+				<?php
+					getResults("notice","notice","notice_",5,"short");
+				?>
 			</ul>
-			<span class="readMore">All Notices</span>
+			<span class="readMore"><a href="notices.php?type=notice">All Notices</a></span>
 			</li>
 			<li>
 			
 			<span class="topicTitle">STUDENT ACTIVITIES</span>
 			<ul class="belowContent">
-				<li><a href="#">Event1</a></li>
-				<li><a href="#">Event1</a></li>
-				<li><a href="#">Event1</a></li>
-				<li><a href="#">Event1</a></li>
-				<li><a href="#">Event1</a></li>
-				<li><a href="#">Event1</a></li>
-				<li><a href="#">Event1</a></li>
-				<li><a href="#">Event1</a></li>
-				<li><a href="#">Event1</a></li>
-				<li><a href="#">Event1</a></li>
-				
+				<?php
+					getResults("stdact","stdact","stdact_",5,"short");
+				?>	
 			</ul>
-			<span class="readMore">All Activities</span>
+			<span class="readMore"><a href="notices.php?type=stdact">All Activities</a></span>
 			</li>
 			
 			<li id="news">
 			
 			<span class="topicTitle">NEWS AND ANNOUNCEMENTS</span>
 			<ul id="ticker" class="belowContent">
-				<li><a href="#">Event asdjfkasdf lkasdlkfaslk dfjklsa djflkasdj flkasjdflkasjdlfkjaslkdf jalskdjflkasdjflk asjdflkasj dlfkas jdf1</a></li>
-				<li><a href="#">Event2</a></li>
-				<li><a href="#">Event3</a></li>
-				<li><a href="#">Event4</a></li>
-				<li><a href="#">Event5</a></li>
-				<li><a href="#">Event6</a></li>
-				<li><a href="#">Event7</a></li>
-				<li><a href="#">Event8</a></li>
-				<li><a href="#">Event9</a></li>
-				<li><a href="#">Event10</a></li>																				
+					<?php
+					getResults("news","news","news_",5,"short");
+				?>
 			</ul>
-			<span class="readMore newsFloat">All News</span>
+			<span class="readMore newsFloat"><a href="notices.php?type=news">All News</a></span>
 			</li>
 		</ul>
 	</div>

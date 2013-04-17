@@ -1,6 +1,7 @@
 <?php
 $dbconnect = "../include/dbconnect.php";
 include ($dbconnect);
+include("../include/functions.php");
 	$pageId = $_GET["page"];
 	if(!empty($pageId)){
 		$query = "SELECT * FROM `pages` WHERE pageId = $pageId";

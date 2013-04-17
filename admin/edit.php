@@ -15,8 +15,10 @@
 					$pageTitle = $_POST['title'];
 					$pageDesc = $_POST['pageDesc'];
 					$pageContent = $_POST['editor1'];
-					
-					$query = "UPDATE pages SET pageTitle='$pageTitle',pageDesc='$pageDesc',pageContent='$pageContent' WHERE pageId='$pageId'";
+					$template = $_POST['template'];
+					$pageLink = $_POST['pageLink'];
+					$pageLink = json_encode($pageLink);
+					$query = "UPDATE pages SET pageTitle='$pageTitle',pageDesc='$pageDesc',pageContent='$pageContent',pageLink='$pageLink',template='$template' WHERE pageId='$pageId'";
 					$result = mysql_query($query);
 					if (!$result) {
 						die('Invalid query: ' . mysql_error());

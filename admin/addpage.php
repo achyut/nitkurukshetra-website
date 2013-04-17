@@ -13,64 +13,64 @@
 <script src="ckeditor/ckeditor.js"></script>
 
 <?php
-				$pageId=$_GET['pageId'];
 				$mode = $_GET['mode'];
 				$pageId = $_GET["page"];
-				if(!empty($pageId)){
-					$query = "SELECT * FROM `pages` WHERE pageId = $pageId";
-					$result = mysql_query($query);
-					if (!$result) {
-						die('Invalid query: ' . mysql_error());
-					}
-					$num_rows = mysql_num_rows($result);
-					if(!$num_rows){
-						$pageTitle="";
-						$pageDesc="National Institute of Technology.";
-						$pageContent = "The requested page cannot be found";
-					}
-					else{
-						$row = mysql_fetch_row($result);
-						//var_dump($row);
-						$pageTitle=$row[1];
-						$pageDesc = $row[2];
-						$pageContent = $row[3];
-					}
-				}
-				else{
-	
-					$pageTitle="";
-					$pageDesc="National Institute of Technology.";
-					$pageContent = "";
-	
-				}
+				$template = $_GET["template"];
+				$data = showPageDetails($pageId);
+			?>
+			<?php
+				if(!empty($template)){
 			?>
 			<form action="<?php if(!empty($pageId)){echo"edit.php";}else{echo"add.php";} ?>" method="POST">
+			<input type="hidden" name="pageId" value="<?php echo $data[0];?>"/>
+			<input type="hidden" name="template" value="<?php echo $template;?>"/>
 	<div class="belowContainer">
+		
 		<div class="centerBox">
-			<div class="sideBar">
-				<ul class="sideNav">
-					<li><a href="#">Welcome!</a></li>	
-					<li><a href="#">Administrator</a></li>				
-				</ul>
-				&nbsp;&nbsp;Add links to the page<br/>
-				<input type="text" class="left" id="birds"/>
-			</div> <!-- sidenav ends -->
-			<div class = "mainContent">
-			
-			
-			
-					Page Title: <input type="text" name="title" value="<?php echo $pageTitle;?>"><br/>
-					Page Description:<textarea name="pageDesc"><?php echo$pageDesc;?></textarea><br/>
-					
-					<textarea class="ckeditor" id="editor1" name="editor1" rows="10"><?php echo$pageContent;?></textarea><br/>
-					<input type="submit" value="submit"/>
-					<input type="hidden" name="pageId" value="<?php echo $pageId;?>"/>
-			
-			
-			</div>
+			<?php 
+				if($template=="full"){
+					include("../template/fullpage.php");
+				}
+				else if($template =="profile"){
+					include("../template/profilepage.php");
+				}
+				else if($template =="department"){
+					include("../template/departmentpage.php");
+				}
+				else if($template =="faculty"){
+					include("../template/facultypage.php");
+				}
+				else if($template =="sidenav"){
+					include("../template/sidenavpage.php");
+				}			
+				else{
+					include("../template/sidenavpage.php");
+				}
+			?>
 		</div>
+		
 	</div>
 	</form>
+	<?php
+	}
+	else{
+	?>	
+	<div class="belowContainer">
+		<div class="centerBox">
+			<div class="mainContent">
+			
+			<h1>Please select a template for the page</h1>
+			<a><a href="addpage.php?mode=add&&template=sidenav">Common page with navigation in sidebar</a><br>
+			<a><a href="addpage.php?mode=add&&template=department">Department Homepage</a><br>
+			<a><a href="addpage.php?mode=add&&template=faculty">Faculty Page</a><br>
+			<a><a href="addpage.php?mode=add&&template=profile">Profile Page</a><br>
+			<a><a href="addpage.php?mode=add&&template=full">Full Blank Page</a><br>
+		</div>
+		</div>
+	</div>
+	<?php
+	}
+	?>
 <?php
 	include("../template/adminfooter.php");
 ?>

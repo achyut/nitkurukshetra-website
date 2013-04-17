@@ -1,33 +1,7 @@
 <?php
 $dbconnect = "include/dbconnect.php";
 include ($dbconnect);
-	$pageId = $_GET["page"];
-	if(!empty($pageId)){
-		$query = "SELECT * FROM `pages` WHERE pageId = $pageId";
-		$result = mysql_query($query);
-		if (!$result) {
-			die('Invalid query: ' . mysql_error());
-		}
-		$num_rows = mysql_num_rows($result);
-		if(!$num_rows){
-			$pageTitle="";
-			$pageDesc="National Institute of Technology.";
-			$pageContent = "The requested page cannot be found";
-		}
-		else{
-			$row = mysql_fetch_row($result);
-			//var_dump($row);
-			$pageTitle=$row[1]." | ";
-			$pageDesc = $row[2];
-			$pageContent = $row[3];
-		}
-	}
-	else{
-	
-		$pageTitle="";
-		$pageDesc="National Institute of Technology.";
-		$pageContent = "oops The link seems to be broken";
-	}
+include("include/functions.php");
 ?>
 <!DOCTYPE html>
 <html>
@@ -67,7 +41,7 @@ include ($dbconnect);
 	<div class="menu">
 		<div class="centerBox">
 		<ul id="menu">
-      <li><a href="index5.aspx">HOME</a></li>
+      <li><a href="index.php">HOME</a></li>
 
       <li><a href="">INSTITUTE</a>
         <ul class="drop">

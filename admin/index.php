@@ -9,10 +9,8 @@
 					<li><a href="#">Administrator</a></li>	
 				</ul>
 			</div> <!-- sidenav ends -->
-			<div class = "mainContent">
-					<a href="addpage.php?mode=add">Add new page</a><br/><br/><br/>
-					<form action="addpage.php?mode=edit" method="GET">edit exising page<br/>Page Id:<input name="page" type="text"/><input type="submit" value="edit"/></form></a><br/>
-					<a href="#">view sitemap</a><br/>
+			<div class = "mainContent">		
+					<a href="sitemap.php">Add/Edit Website</a><br/>
 					<a href="notices.php?type=event">Forth coming events</a><br/>
 					<a href="notices.php?type=news">News feed</a><br/>
 					<a href="notices.php?type=notice">Notices</a><br/>

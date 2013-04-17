@@ -12,7 +12,7 @@
 			<div class = "mainContent">
 				<?php 
 					function getResults($type,$table,$scut){
-						$query = "SELECT * FROM $table";
+						$query = "SELECT * FROM ".$table." ORDER by ".$scut."id DESC";
 						$result = mysql_query($query);
 						if (!$result) {
 							die('Invalid query: ' . mysql_error());
@@ -22,32 +22,31 @@
 							$id = $row[0];
 							$title = $row[1];
 							$url = $row[2];
+							
 							echo "<li><a href='$url'>$title</a>&nbsp;&nbsp;<a href='addnotice.php?mode=edit&&id=$id&&type=$type'><img src='../images/edit.png' /></a>&nbsp;&nbsp;<a href='deletenotice.php?id=$id&&type=$type'><img src='../images/delete.png' /></a></li>";
 						}
 						echo "</ul>";
 					}
 					$type= $_GET['type'];
-					if($type="event"){
-						
-						echo "<h1>Forth Coming events of NIT Kurukshetra</h1>";
-						echo "<a href='addnotice.php?type=$type'>Add New Event</a></br>";
-						getResults("event","event","evnt_");
-						
+					echo "<h1>$type of NIT Kurukshetra</h1>";
+					echo "<a href='addnotice.php?type=$type&&mode=add'>Add New $type</a></br>";
+					if($type=="event"){
+						getResults("event","event","evnt_");					
 					}
-					else if($type="news"){
+					else if($type=="news"){
 						getResults("news","news","news_");
 					}
-					else if($type="notice"){
-					
+					else if($type=="notice"){
+						getResults("notice","notice","notice_");
 					}
-					else if($type="stdact"){
-					
+					else if($type=="stdact"){
+					getResults("stdact","stdact","stdact_");
 					}
-					else if($type="tender"){
-					
+					else if($type=="tender"){
+					getResults("tender","tender","tndr_");
 					}
-					else if($type="interview"){
-											
+					else if($type=="interview"){
+					getResults("interview","walkin","wlk_");											
 					}
 					else{
 						echo "oops broken link!!!";

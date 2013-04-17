@@ -23,7 +23,7 @@
 					}
 					else{
 						echo "<h1><span class='success'>Page successfully Edited.</span></h1>";
-						echo "<a href='index.php'>Edit new page</a><br/>";
+						echo "<a href='sitemap.php'>Edit new page</a><br/>";
 						echo "<a href='addpage.php'>Add new page</a>";
 					}
 	

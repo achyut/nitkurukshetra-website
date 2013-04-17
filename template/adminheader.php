@@ -67,7 +67,7 @@ include ($dbconnect);
 	<div class="menu">
 		<div class="centerBox">
 		<ul id="menu">
-      <li><a href="index5.aspx">HOME</a></li>
+      <li><a href="index.php">HOME</a></li>
 
       <li><a href="">INSTITUTE</a>
         <ul class="drop">

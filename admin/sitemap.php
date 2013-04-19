@@ -13,7 +13,7 @@
 			<h1>SiteMap of Website</h1>
 					<a href="addpage.php?mode=add">Add new page</a><br/>
 			<?php
-			function getResults($type,$table,$scut){
+			function getPageResults($type,$table,$scut){
 						$query = "SELECT * FROM ".$table." ORDER by ".$scut."";
 						$result = mysql_query($query);
 						if (!$result) {
@@ -31,7 +31,7 @@
 					
 			?>
 			<?php 
-			getResults("","pages","pageTitle");
+			getPageResults("","pages","pageTitle");
 			?>
 			</div>
 		</div>

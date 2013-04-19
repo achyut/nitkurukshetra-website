@@ -19,6 +19,22 @@
 				else if($template =="profile"){
 				
 				}
+				else if($template =="department"){
+					?>
+					<div class="mainContent">
+						<div class="deptContent">
+							<?php echo $data[3]; ?>
+						</div>
+						<div class="deptSideNav">
+							<ul class="deptSideList">
+								<?php displayPageTitle($data[4],$mode); ?>
+								<li><a href="gallery.php">Photo Gallery</a></li>
+							</ul>
+						</div>
+					
+					</div>
+					<?php
+				}
 				else{
 					echo "<div class='sideBar'>";
 						echo"<ul class='sideNav'>";

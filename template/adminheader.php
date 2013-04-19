@@ -60,7 +60,7 @@ include("../include/functions.php");
 					<input type="submit" value="GO" />
 				</form>
 				<div class="topMenu">
-					<img src="images/interview.png"/>&nbsp;&nbsp;<a href="#">RECRUITMENT</a>&nbsp;&nbsp;&nbsp;<img src="images/tender.png"/>&nbsp;&nbsp;<a href="#">TENDERS</a>&nbsp;&nbsp;&nbsp;<img src="images/mail.png"/>&nbsp;&nbsp;<a href="#">WEBMAIL</a>
+					<img src="images/interview.png"/>&nbsp;&nbsp;<a href="notices.php?type=interview">RECRUITMENT</a>&nbsp;&nbsp;&nbsp;<img src="images/tender.png"/>&nbsp;&nbsp;<a href="notices.php?type=tender">TENDERS</a>&nbsp;&nbsp;&nbsp;<img src="images/mail.png"/>&nbsp;&nbsp;<a href="#">WEBMAIL</a>
 				</div>
 			</div>
 		</div>

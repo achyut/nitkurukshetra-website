@@ -1,4 +1,4 @@
-@font-face { src: url("gargi.ttf"); font-family: "gargi";  }
+@font-face { src: url("krishna.ttf"); font-family: "krishna";  }
 body{
 	margin:0px;
 	padding:0px;
@@ -25,15 +25,17 @@ a,a img{
 	height:30px;
 	color:#FFF;
 	font-weight:bold;
-	padding-top:5px;
+	padding-top:8px;
 }
 .englishTitle{
 	word-spacing:.3em;
-	font-weight:bold;a
+	font-weight:bold;
+	font-size:1.1em;
 }
 .hindiTitle{
-	font:1.2em 'gargi';
+	font:1.4em 'krishna';
 	float:right;
+	margin-top:-5px;
 	margin-right:50px;
 	word-spacing:.2em;
 	font-weight:bold;
@@ -41,6 +43,9 @@ a,a img{
 .centerBox{
 	width:990px;
 	margin:0 auto;
+}
+.comma{
+	font-family:verdana;
 }
 .downSpacing{
 	margin-top:.8em;
@@ -70,12 +75,13 @@ a,a img{
 .nitTitle{
 	font-size:62px;
 	font-weight:1800;
-	letter-spacing:5px;
+	letter-spacing:8px;
 	line-height:50px;
 }
 .kurukshetra{
-	font-size:16px;
+	font-size:22px;
 	letter-spacing:1px;
+	font-weight:900;
 }
 .menu{
 	color:#FFF;
@@ -219,6 +225,7 @@ ul#menu > li ul li
 .slideShowContainer{
 	height:300px;
 	background:#CCC;
+	border-bottom:2px solid #7D0101;
 }
 .slideShowContainer img{
 	height:300px;
@@ -340,9 +347,11 @@ ul#menu > li ul li
 #news a{
 
 }
+
 .sideNav{
 	padding:50px 0px 10px 0px;
 	margin:0;
+	text-transform:uppercase;
 }
 .sideNav li{
 	padding-left:15px;
@@ -355,7 +364,7 @@ ul#menu > li ul li
 	float:left;	
 }
 .mainContent{
-	padding:10px;
+	padding:0px 10px 10px 10px;
 	float:left;
 	color:#000;
 	width:75%;
@@ -367,6 +376,7 @@ ul#menu > li ul li
 }
 .mainContent h1{
 	font-size:1.7em;
+	text-transform:uppercase;
 }
 .fullContent{
 	width:100%;
@@ -398,4 +408,22 @@ ul#menu > li ul li
 }
 .noticeList a{
 	text-decoration:none;
+}
+.deptContent{
+	float:left;
+}
+.deptSideNav{
+	background:#CCC;
+	width:22%;
+	text-transform:uppercase;
+	padding-top:80px;
+	float:right;
+}
+.deptSideList{
+	padding-top:0px;
+	list-style:none;
+	padding:10px;
+}
+.deptSideList li{
+	margin-top:8px;
 }

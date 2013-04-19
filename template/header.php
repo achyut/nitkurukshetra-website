@@ -17,7 +17,7 @@ include("include/functions.php");
 	<div class="mainBody">
 	<div class="background upperStripe">
 		<div class="centerBox textPart">
-			<span class="englishTitle">NATIONAL INSTITUTE OF TECHNOLOGY, KURUKSHETRA</span><span class="hindiTitle">रास्ट्रीय प्रद्योगिकी सस्थान, कुरुक्षेत्र</span>
+			<span class="englishTitle">NATIONAL INSTITUTE OF TECHNOLOGY, KURUKSHETRA</span><span class="hindiTitle">jk"Vªh; izks|kSfxdh laLFkku<span class="comma">,</span> dq:{ks=</span>
 		</div>
 	</div>
 	<div class="logoContainer background">
@@ -32,7 +32,7 @@ include("include/functions.php");
 					<input type="submit" value="GO" />
 				</form>
 				<div class="topMenu">
-					<img src="images/interview.png"/>&nbsp;&nbsp;<a href="#">RECRUITMENT</a>&nbsp;&nbsp;&nbsp;<img src="images/tender.png"/>&nbsp;&nbsp;<a href="#">TENDERS</a>&nbsp;&nbsp;&nbsp;<img src="images/mail.png"/>&nbsp;&nbsp;<a href="#">WEBMAIL</a>
+					<img src="images/interview.png"/>&nbsp;&nbsp;<a href="notices.php?type=interview">RECRUITMENT</a>&nbsp;&nbsp;&nbsp;<img src="images/tender.png"/>&nbsp;&nbsp;<a href="notices.php?type=tender">TENDERS</a>&nbsp;&nbsp;&nbsp;<img src="images/mail.png"/>&nbsp;&nbsp;<a href="#">WEBMAIL</a>
 				</div>
 			</div>
 		</div>
@@ -203,13 +203,8 @@ include("include/functions.php");
         </ul>
       </li>
 
-        <li><a href="about.htm">TEQIP</a>
-        <ul class="drop">
-          <li><a href="about.htm">About</a></li>
-          <li><a href="teqipbasicinfo.htm">Institute Info</a></li>
-          <li><a href="teqipfinancial2009.htm">Financial Status</a></li>
-
-        </ul>
+        <li><a href="about.htm">T&P CELL</a>
+        
       </li>
       <li><a href="aicteinfo.htm">AICTE INFO</a>
         <ul class="drop">

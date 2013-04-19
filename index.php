@@ -2,10 +2,10 @@
 	include("template/header.php");
 ?>
 	<div id="slideShow" class="slideShowContainer">
-		<img src="images/NIT_KURUKSHETRA_02.jpg" />
-		<img src="images/NIT_KURUKSHETRA_03.jpg" />
-		<img src="images/NIT_KURUKSHETRA_04.jpg" />
-		<img src="images/NIT_KURUKSHETRA_05.jpg" />
+		<img src="images/pic4.jpg" />
+		<img src="images/pic6.JPG" />
+		<img src="images/pic3.jpg" />
+		<img src="images/pic1.jpg" />
 		
 	</div>
 
@@ -19,7 +19,7 @@
 			</marquee>
 			</ul>
 			<ul class="archieve">
-				<li><a href="#">PHOTO GALLERY</a></li>
+				<li><a href="#">PHOTOS</a></li>
 				<li>::</li>
 				<li><a href="#">ARCHIEVE</a></li>				
 			</ul>

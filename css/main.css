@@ -416,14 +416,16 @@ ul#menu > li ul li
 }
 
 .sideNav{
-	padding:50px 0px 10px 0px;
+	color: #7d0101;
+	padding:50px 0px 10px 25px;
 	margin:0;
 	text-transform:uppercase;
 }
 .sideNav li{
-	padding-left:15px;
 	margin-top:8px;
-	list-style:none;
+}
+.sideNav a{
+	text-decoration:none;
 }
 .sideBar{
 	width:20%;
@@ -437,13 +439,17 @@ ul#menu > li ul li
 	width:75%;
 }
 .mainContent p{
-	font-family: 'Sintony', sans-serif;
 	font-size:.9em;
 	text-align:justify;
+	font-family: 'Sintony', sans-serif;
 }
 .mainContent h1{
 	font-size:1.7em;
 	text-transform:uppercase;
+}
+.mainContent table,.mainContent ul{
+	font-family: 'Sintony', sans-serif;
+	font-size:.9em;
 }
 .fullContent{
 	width:100%;
@@ -479,18 +485,22 @@ ul#menu > li ul li
 }
 .deptContent{
 	float:left;
+	width:75%;
 }
 .deptSideNav{
 	background:#CCC;
+	color: #7d0101;
 	width:22%;
 	text-transform:uppercase;
 	padding-top:80px;
 	float:right;
+
+}
+.deptSideList a{
+	text-decoration:none;
 }
 .deptSideList{
-	padding-top:0px;
-	list-style:none;
-	padding:10px;
+	padding:0px 5px 10px 20px;
 }
 .deptSideList li{
 	margin-top:8px;

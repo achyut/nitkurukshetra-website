@@ -31,7 +31,7 @@
 					
 			?>
 			<?php 
-			getPageResults("","pages","pageTitle");
+			getPageResults("","pages","pageId DESC");
 			?>
 			</div>
 		</div>

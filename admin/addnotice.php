@@ -11,9 +11,12 @@
 			</div> <!-- sidenav ends -->
 			<?php
 				$type=$_GET['type'];
+				$type = cleanInput($type);
 				$mode=$_GET['mode'];
+				$mode=cleanInput($mode);
 				if($mode=="edit"){
 					$id = $_GET['id'];
+					$id = cleanInput($id);
 				}
 				
 				function getData($table,$id,$sub){
@@ -71,13 +74,17 @@
 							$url = $row[2];
 							$url = explode("/",$url);
 							$url = $url[1];
-							$shTitle = $row[3];	
+							$shTitle = $row[3];
+							$new = $row[4];
 				}
 				?>
 					<form action="submitnotice.php" method="post">
 						Title: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="title" size="80" value="<?php echo $title; ?>"/><br/><br>
 						Homepage Title: <input type="text" value="<?php echo $shTitle ; ?>" name="shTitle" size="30" maxlength="30"/><br/><br>
-						File name / URL:<input type="text" name="file" id="file" value="<?php echo $url;?>"><br><br>
+						File name / URL:<input type="text" name="file" id="file" value="<?php echo $url;?>"><br> <br>
+						Mark As New:
+						<input type="radio" name="new" value="true" <?php if($new=="true")echo "checked=checked"; ?>>True					
+						<input type="radio" name="new" value="false" <?php if($new=="false"){echo "checked=checked";}elseif($new=="true"){}else{echo "checked=checked";} ?>>False<br><br>
 						<input type="hidden" name="id" value="<?php echo $id ; ?>" />
 						<input type="hidden" name="mode" value="<?php echo $mode ; ?>" />
 						<input type="hidden" name="type" value="<?php echo $type ; ?>" />

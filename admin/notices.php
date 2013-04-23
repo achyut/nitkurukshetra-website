@@ -16,25 +16,25 @@
 					echo "<a href='addnotice.php?type=$type&&mode=add'>Add New $type</a></br>";
 					echo "<ul class='noticeList'>";
 					if($type=="event"){
-						getResults("event","event","evnt_",2,"long");					
+						getResults("event","event","evnt_",2,"long","true");					
 					}
 					else if($type=="news"){
-						getResults("news","news","news_",2,"long");
+						getResults("news","news","news_",2,"long","true");
 					}
 					else if($type=="notice"){
-						getResults("notice","notice","notice_",2,"long");
+						getResults("notice","notice","notice_",2,"long","true");
 					}
 					else if($type=="stdact"){
-						getResults("stdact","stdact","stdact_",2,"long");
+						getResults("stdact","stdact","stdact_",2,"long","true");
 					}
 					else if($type=="tender"){
-						getResults("tender","tender","tndr_",2,"long");
+						getResults("tender","tender","tndr_",2,"long","true");
 					}
 					else if($type=="interview"){
-						getResults("interview","walkin","wlk_",2,"long");											
+						getResults("interview","walkin","wlk_",2,"long","true");											
 					}
 					else if($type=="scrollnews"){
-						getResults("scrollnews","scrollnews","scroll_",2,"long");											
+						getResults("scrollnews","scrollnews","scroll_",2,"long","true");											
 					}
 					else{
 						echo "oops broken link!!!";

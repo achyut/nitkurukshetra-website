@@ -12,6 +12,7 @@
 			<div class = "mainContent">
 					<?php 
 					$pageTitle = $_POST['title'];
+					$pageTitle = $pageTitle;
 					$pageDesc = $_POST['pageDesc'];
 					$pageContent = $_POST['editor1'];
 					$pageLink = $_POST['pageLink'];

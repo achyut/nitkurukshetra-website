@@ -4,6 +4,8 @@
 <?php
 		$mode = $_GET['mode'];
 		$pageId = $_GET["page"];
+		$mode = cleanInput($mode);
+		$pageId = cleanInput($pageId);
 		$data = showPageDetails($pageId);
 		$template = $data[5];
 	?>
@@ -34,6 +36,15 @@
 					
 					</div>
 					<?php
+				}
+				else if($template=="login"){
+					?>
+					<div class = 'mainContent fullContent'>
+							<?php
+								echo $data[3];
+							?>
+					</div>
+				<?php
 				}
 				else{
 					echo "<div class='sideBar'>";

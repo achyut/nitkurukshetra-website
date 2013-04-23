@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	$("#slideShow").slidesjs({
+	/*$("#slideShow").slidesjs({
         width: 940,
         height: 300,
         play: {
@@ -9,7 +9,8 @@ $(document).ready(function(){
           swap: true
         }
       });
-      
+      */
+      $('#slider').hslide();
 function tick(){
 	$('#ticker li:first').slideUp( function () { $(this).appendTo($('#ticker')).slideDown(); });
 }

@@ -31,6 +31,9 @@
 				if($template=="full"){
 					include("../template/fullpage.php");
 				}
+				else if($template =="login"){
+					include("../template/loginpage.php");
+				}
 				else if($template =="profile"){
 					include("../template/profilepage.php");
 				}
@@ -42,7 +45,7 @@
 				}
 				else if($template =="sidenav"){
 					include("../template/sidenavpage.php");
-				}			
+				}
 				else{
 					include("../template/sidenavpage.php");
 				}
@@ -62,7 +65,7 @@
 			<h1>Please select a template for the page</h1>
 			<a><a href="addpage.php?mode=add&&template=sidenav">Common page with navigation in sidebar</a><br>
 			<a><a href="addpage.php?mode=add&&template=department">Department Page</a><br>
-<!--			<a><a href="addpage.php?mode=add&&template=faculty">Faculty Page</a><br> -->
+			<a><a href="addpage.php?mode=add&&template=login">Login Page</a><br>
 			<a><a href="addpage.php?mode=add&&template=profile">Profile Page</a><br>
 			<a><a href="addpage.php?mode=add&&template=full">Full Blank Page</a><br>
 		</div>

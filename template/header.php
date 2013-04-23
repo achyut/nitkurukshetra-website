@@ -3,6 +3,7 @@ $dbconnect = "include/dbconnect.php";
 include ($dbconnect);
 include("include/functions.php");
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,10 +13,10 @@ include("include/functions.php");
 	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Strait|Roboto+Condensed|Sintony" />
 	<link rel="stylesheet" href="css/main.css"></link>
 </head>
-<body>
+<body class="pageBg">
 <a id="top"></a>
 	<div class="mainBody">
-	<div class="background upperStripe">
+	<div class="pageBg upperStripe">
 		<div class="centerBox textPart">
 			<span class="englishTitle">NATIONAL INSTITUTE OF TECHNOLOGY, KURUKSHETRA</span><span class="hindiTitle">jk"Vªh; izks|kSfxdh laLFkku<span class="comma">,</span> dq:{ks=</span>
 		</div>
@@ -32,13 +33,13 @@ include("include/functions.php");
 					<input type="submit" value="GO" />
 				</form>
 				<div class="topMenu">
-					<img src="images/interview.png"/>&nbsp;&nbsp;<a href="notices.php?type=interview">RECRUITMENT</a>&nbsp;&nbsp;&nbsp;<img src="images/tender.png"/>&nbsp;&nbsp;<a href="notices.php?type=tender">TENDERS</a>&nbsp;&nbsp;&nbsp;<img src="images/mail.png"/>&nbsp;&nbsp;<a href="#">WEBMAIL</a>
+					<img src="images/icon_interview.png"/>&nbsp;&nbsp;<a href="notices.php?type=interview">RECRUITMENT</a>&nbsp;&nbsp;&nbsp;<img src="images/tender_bag.png"/>&nbsp;&nbsp;<a href="notices.php?type=tender">TENDERS</a>&nbsp;&nbsp;&nbsp;<img src="images/login.png"/>&nbsp;&nbsp;<a href="#">LOGIN</a>
 				</div>
 			</div>
 		</div>
 	</div>
 	
-	<div class="menu">
+	<div class="background menu">
 		<div class="centerBox">
 		<ul id="menu">
       <li><a href="index.php">HOME</a></li>
@@ -206,13 +207,16 @@ include("include/functions.php");
         <li><a href="about.htm">T&P CELL</a>
         
       </li>
-      <li><a href="aicteinfo.htm">AICTE INFO</a>
+      <li><a href="aicteinfo.htm">EVENTS</a>
         <ul class="drop">
-          <li><a href="aictecivil.htm">Civil</a></li>
-          <li><a href="aictemech.htm">Mechanical</a></li>
-          <li><a href="aicteelec.htm">Electrical</a></li>
-
-          <li><a href="aicteeandc.htm">E&C </a></li>
+          <li><a href="aictecivil.htm">Techspardha</a></li>
+          <li><a href="aictemech.htm">Confluence</a></li>
+          <li><a href="aictemech.htm">Alumini Talks</a></li>
+          <li><a href="aictemech.htm">Altius</a></li>
+          <li><a href="aicteelec.htm">Utkarsh</a></li>
+          <li><a href="aicteelec.htm">Auto-Kriti</a></li>
+          <li><a href="aicteelec.htm">E-summit</a></li>
+		  <li><a href="aictemech.htm">Sports Meet</a></li>
         </ul>
       </li>
       <li><a href="OtherNITs.htm">OTHER NITS</a></li>

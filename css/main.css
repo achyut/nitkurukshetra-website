@@ -515,3 +515,42 @@ ul#menu > li ul li
 	font-size:.6em;
 	text-decoration:blink;
 }
+.photoBox{
+	float:left;
+}
+.infoBox{
+	float:left;
+	padding-left:20px;
+}
+.infoData{
+	line-height:2em;
+}
+.profileBox{
+	padding:2em 0em 0em 8em;
+}
+.albumList{
+	margin:0;
+	padding:0;
+}
+.albumList li{
+	list-style:none;
+	height:200px;
+	width:200px;
+	display:block;
+	float:left;
+	padding:10px;
+	background:#CCC;
+	margin-left:4em;
+	margin-top:2em;
+}
+
+.albumList img{
+	width:100%;
+	height:100%;
+}
+.albumList span{
+	background:#CCC;
+	width:100%;
+	display:block;
+	text-align:center;
+}

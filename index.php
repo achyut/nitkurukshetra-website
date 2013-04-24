@@ -3,9 +3,10 @@
 ?>
 	<div id="slider" class="slideShowContainer">
 		<div><img src="images/pic4.jpg" /></div>
-		<div><img src="images/pic6.JPG" /></div>
+		<div><img src="images/pic7.jpg" /></div>
 		<div><img src="images/pic3.jpg" /></div>
 		<div><img src="images/pic1.jpg" /></div>
+		<div><img src="images/pic8.jpg" /></div>
 		
 	</div>
 
@@ -13,6 +14,8 @@
 			<div class="marquee centerBox"><span class="latestText">HAPPENING NOW:</span>
 			<ul class="marqueeNews">
 			<marquee>
+			<?php echo `whoami`;  ?>
+
 				<?php
 					getResults("scrollnews","scrollnews","scroll_",5,"short","false");
 				?>

@@ -45,7 +45,7 @@
 			<?php
 				$title = $_POST['title'];
 				$shTitle = $_POST['shTitle'];
-				$url = $_POST['file'];
+				//$url = $_POST['file'];
 				$new = $_POST['new'];
 				//echo $title;
 				//echo $shTitle;
@@ -53,6 +53,21 @@
 				if(!preg_match('%^((https?://)|(www\.))([a-z0-9-].?)+(:[0-9]+)?(/.*)?$%i',$url)==true){
 					$url ="files/".$url;
 				}
+
+				if ($_FILES["file"]["error"] > 0)
+				  {
+				  echo "Error: " . $_FILES["file"]["error"] . "<br>";
+					die();
+				  }
+				else
+				  {
+				  echo "Upload: " . $_FILES["file"]["name"] . "<br>";
+				  echo "Type: " . $_FILES["file"]["type"] . "<br>";
+				  echo "Size: " . ($_FILES["file"]["size"] / 1024) . " kB<br>";
+				  echo "Stored in: " . $_FILES["file"]["tmp_name"];
+				  move_uploaded_file($_FILES["file"]["tmp_name"],"/srv/www/htdocs/nit/files/" . $_FILES["file"]["name"]);
+				  }
+
 			?>
 			<?php 
 					if($mode=="edit"){

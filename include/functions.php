@@ -10,6 +10,16 @@ function executeQuery($query){
 		}
 	
 }
+function getPersonalDetail($facid){
+	if($facid==""||$facid==NULL||$facid==''){
+		return NULL;
+	}
+	$query = "SELECT * FROM faculty WHERE cdno = '$facid' LIMIT 1";
+	$result = executeQuery($query);
+	while ($row = mysql_fetch_array($result, MYSQL_NUM)) {
+		return $row;		
+		}
+}
 
 function showPageDetails($pageId){
 	if(!empty($pageId)){
@@ -123,6 +133,8 @@ function editPageTitle($pageLinks,$mode){
 					
 function cleanInput($input){
 	$input = preg_replace("/[^0-9a-zA-Z]/","", $input);
-  	if($input == '') $input = 1;
+  	if($input ==NULL) $input = NULL;
+  	else if($input == '') $input = 1;
+
   	return $input;
 }

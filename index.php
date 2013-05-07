@@ -7,8 +7,9 @@
 		<div><img src="images/pic7.jpg" /></div>	
 		<div><img src="images/pic3.jpg" /></div>
 		<div><img src="images/pic1.jpg" /></div>
-		<div><img src="images/pic8.jpg" /></div>
-		
+		<div><img src="images/pic10.jpg" /></div>
+		<div><img src="images/pic9_1.jpg" /></div>
+		<div><img src="images/pic7_1.jpg" /></div>
 		
 	</div>
 

@@ -11,7 +11,8 @@ function executeQuery($query){
 	
 }
 function getSearchResults($keyword){
-	$query = "SELECT event.evnt_title AS title,'evnt' AS TYPE,event.evnt_id as id,event.evnt_url as url,event.evnt_file as file FROM event WHERE event.evnt_title LIKE '%".$keyword."%' UNION	SELECT faculty.name AS title,'fact' AS TYPE,faculty.cdno as id,'url' as url,'file' as file FROM faculty WHERE faculty.name LIKE '%".$keyword."%' UNION	SELECT news.news_title AS title,'news' AS TYPE,news.news_id as id,news.news_url as url,news.news_file as file FROM news WHERE news.news_title LIKE '%".$keyword."%' 	UNION SELECT notice.notice_title AS title,'notice' AS TYPE,notice.notice_id as id,notice.notice_url as url,notice.notice_file as file FROM notice WHERE notice.notice_title LIKE '%".$keyword."%' UNION SELECT scrollnews.scroll_title AS title,'scroll' AS TYPE,scrollnews.scroll_id as id,scrollnews.scroll_url as url,scrollnews.scroll_file as file FROM scrollnews WHERE scrollnews.scroll_title LIKE '%".$keyword."%' UNION SELECT stdact.stdact_title AS title,'stdact' AS TYPE,stdact.stdact_id as id,stdact.stdact_url as url,stdact.stdact_file as file FROM stdact WHERE stdact.stdact_title LIKE '%".$keyword."%' UNION SELECT tender.tndr_title AS title,'tender' AS TYPE,tender.tndr_id as id,tender.tndr_url as url,tender.tndr_file as file FROM tender WHERE tender.tndr_title LIKE '%".$keyword."%' UNION SELECT walkin.wlk_title AS title,'walkin' AS TYPE,walkin.wlk_id as id,walkin.wlk_url as url,walkin.wlk_file as file FROM walkin WHERE walkin.wlk_title LIKE '%".$keyword."%' UNION SELECT pages.page_title AS title,'page' AS TYPE,pages.page_id as id,'hello' as url,'asdf' as file FROM pages WHERE pages.page_title LIKE '%".$keyword."%'";	
+  	$keyword=cleanSearch($keyword);
+  	$query = "SELECT event.evnt_title AS title,'evnt' AS TYPE,event.evnt_id as id,event.evnt_url as url,event.evnt_file as file FROM event WHERE event.evnt_title LIKE '%".$keyword."%' UNION	SELECT faculty.name AS title,'fact' AS TYPE,faculty.cdno as id,'url' as url,'file' as file FROM faculty WHERE faculty.name LIKE '%".$keyword."%' UNION	SELECT news.news_title AS title,'news' AS TYPE,news.news_id as id,news.news_url as url,news.news_file as file FROM news WHERE news.news_title LIKE '%".$keyword."%' 	UNION SELECT notice.notice_title AS title,'notice' AS TYPE,notice.notice_id as id,notice.notice_url as url,notice.notice_file as file FROM notice WHERE notice.notice_title LIKE '%".$keyword."%' UNION SELECT scrollnews.scroll_title AS title,'scroll' AS TYPE,scrollnews.scroll_id as id,scrollnews.scroll_url as url,scrollnews.scroll_file as file FROM scrollnews WHERE scrollnews.scroll_title LIKE '%".$keyword."%' UNION SELECT stdact.stdact_title AS title,'stdact' AS TYPE,stdact.stdact_id as id,stdact.stdact_url as url,stdact.stdact_file as file FROM stdact WHERE stdact.stdact_title LIKE '%".$keyword."%' UNION SELECT tender.tndr_title AS title,'tender' AS TYPE,tender.tndr_id as id,tender.tndr_url as url,tender.tndr_file as file FROM tender WHERE tender.tndr_title LIKE '%".$keyword."%' UNION SELECT walkin.wlk_title AS title,'walkin' AS TYPE,walkin.wlk_id as id,walkin.wlk_url as url,walkin.wlk_file as file FROM walkin WHERE walkin.wlk_title LIKE '%".$keyword."%' UNION SELECT pages.page_title AS title,'page' AS TYPE,pages.page_id as id,'hello' as url,'asdf' as file FROM pages WHERE pages.page_title LIKE '".$keyword."'";
 	$result = executeQuery($query);
 	return $result;
 }
@@ -248,6 +249,14 @@ function cleanInput($input){
   	return $input;
 }
 
+function cleanSearch($input){
+	$input = preg_replace("/[^0-9a-zA-Z\w ]/","", $input);
+  	if($input ==NULL) $input = NULL;
+  	else if($input == '') $input = 1;
+
+  	return $input;
+
+}
 function clean_directory($input){
 	$input = preg_replace("/[^0-9a-zA-Z\w]/","", $input);
 	return $input;

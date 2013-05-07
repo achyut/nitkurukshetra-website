@@ -12,7 +12,7 @@
 		if ($handle = opendir($path)) {
 			while (false !== ($entry = readdir($handle))) {
 				if ($entry != "." && $entry != ".." && $entry != "Thumbs.db") { 
-					echo"<li><a href='photos.php?album=$entry'>";
+					echo"<li><a href='photos.php?album=$path/$entry'>";
 					if ($handle1 = opendir("$path/".$entry)) {
 						$loop = 0;
 						while (false !== ($entry1 = readdir($handle1)) && $loop!==1) {
@@ -55,7 +55,8 @@
 		<ul class="albumList">
 			<?php displayAlbum("photo/extra"); ?>
 		</ul>
-		<div class="clear"></div>
+		<p>&nbsp;</p>
+		
 <?php
 	include("template/footer.php");
 ?>

@@ -410,6 +410,7 @@ ul#menu > li ul li
 	display:inline;
 }
 .belowContent a{
+	font-family:'verdana',serif;
 	font-size:.9em;
 	color:#000;
 	text-decoration:none;

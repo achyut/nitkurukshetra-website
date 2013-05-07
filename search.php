@@ -6,7 +6,6 @@
 	<div class="centerBox">
 	<?php
 		$keyword = $_GET['query'];
-			$keyword = cleanInput($keyword);
 		?>
 		<h1>Search Results for: <?php echo $keyword ?></h1>
 		<?php

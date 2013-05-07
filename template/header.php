@@ -238,7 +238,7 @@ else{
         </ul>
       </li>
 
-        <li><a href="about.htm">T&P CELL</a>
+        <li><a href="sites/old/TnP/tnp_nitk.htm">T&P CELL</a>
         
       </li>
       <li><a href="#">ACTIVITIES</a>

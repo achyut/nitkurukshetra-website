@@ -1,5 +1,5 @@
 	<div class="clear"></div>
-	<div class="footer pageBg centerBox"> <a href="institute.php?page=69">Disclaimer</a> |&nbsp;&nbsp;<a href="institute.php?page=71">Phone Directory</a> |&nbsp;&nbsp;<a href="institute.php?page=70">Contact Us</a>|&nbsp;&nbsp;<a href="institute.php?page=120">Feedback</a>|&nbsp;&nbsp;<a href="institute.php?page=176">Resources</a><br><br/>
+	<div class="footer pageBg centerBox"><a href="sites/old/">Old Website</a> |&nbsp;&nbsp;<a href="institute.php?page=69">Disclaimer</a> |&nbsp;&nbsp;<a href="institute.php?page=71">Phone Directory</a> |&nbsp;&nbsp;<a href="institute.php?page=70">Contact Us</a>|&nbsp;&nbsp;<a href="institute.php?page=120">Feedback</a>|&nbsp;&nbsp;<a href="institute.php?page=176">Resources</a><br><br/>
   <span class="copyright">&copy;</span>2013 All Rights Reserved, NIT Kurukshetra-136119, India </div>
 	</div>
 

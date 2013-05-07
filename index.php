@@ -2,6 +2,7 @@
 	$_GET['page'] = 0;
 	include("template/header.php");
 ?>
+	hello
 	<div id="slider" class="slideShowContainer">
 		<div><img src="images/pic4.jpg" /></div>
 		<div><img src="images/pic7.jpg" /></div>	

@@ -2,11 +2,8 @@
 	include("template/header.php");
 ?>
 <?php
-		$mode = $_GET['mode'];
-		$pageId = $_GET["page"];
+		$mode = "view";
 		$mode = cleanInput($mode);
-		$pageId = cleanInput($pageId);
-		$data = showPageDetails($pageId);
 		$template = $data[5];
 	?>
 	<div class="belowContainer">

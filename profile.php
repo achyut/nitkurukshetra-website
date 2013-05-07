@@ -1,4 +1,5 @@
 <?php
+	$_GET['page']=0;
 	include("template/header.php");
 ?>
 <?php
@@ -21,7 +22,7 @@
 		?>
 		
 			<div class="photoBox">
-				<img src="images/faculty/profile.jpg" />	
+				<img src="images/faculty/<?php echo $faculty.".jpg"; ?>" />	
 			</div>
 			<div class="infoBox">
 				<h2>Personal Details</h2>

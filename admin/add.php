@@ -1,4 +1,5 @@
 <?php
+	$_GET['page']=0;
 	include("../template/adminheader.php");
 ?>
 	<div class="belowContainer">
@@ -18,7 +19,7 @@
 					$pageLink = $_POST['pageLink'];
 					$template = $_POST['template'];
 					$pageLink = json_encode($pageLink);
-					$query = "INSERT INTO pages (pageTitle,pageDesc,pageContent,pageLink,template)VALUES ('$pageTitle', '$pageDesc','$pageContent','$pageLink','$template')";
+					$query = "INSERT INTO pages (page_title,page_desc,page_content,page_link,template)VALUES ('$pageTitle', '$pageDesc','$pageContent','$pageLink','$template')";
 					$result = mysql_query($query);
 					if (!$result) {
 						die('Invalid query: ' . mysql_error());

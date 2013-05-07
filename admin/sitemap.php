@@ -1,4 +1,5 @@
 <?php
+	$_GET['page']=0;
 	include("../template/adminheader.php");
 ?>
 	<div class="belowContainer">
@@ -6,12 +7,13 @@
 			<div class="sideBar">
 				<ul class="sideNav">
 					<li><a href="#">Welcome!</a></li>	
-					<li><a href="#">Administrator</a></li>	
+					<li><a href="#"><?php echo $user ?></a></li>
+					<li><a href="logout.php">Logout</a></li>	
 				</ul>
 			</div> <!-- sidenav ends -->
 			<div class = "mainContent">
 			<h1>SiteMap of Website</h1>
-					<a href="addpage.php?mode=add">Add new page</a><br/>
+					<a href="addpage.php?mode=add&&page=&&template=">Add new page</a><br/>
 			<?php
 			function getPageResults($type,$table,$scut){
 						$query = "SELECT * FROM ".$table." ORDER by ".$scut."";
@@ -24,14 +26,14 @@
 							$id = $row[0];
 							$title = $row[1];
 							$template = $row[5];
-							echo "<li><a href='../institute.php?page=$id'>$title</a>&nbsp;&nbsp;<a href='addpage.php?mode=edit&&page=$id&&template=$template'><img src='../images/edit.png' /></a>&nbsp;&nbsp;<a href='deletenotice.php?id=$id&&type=page'><img src='../images/delete.png' /></a></li>";
+							echo "<li><a href='../institute.php?page=$id'>$title</a>&nbsp;&nbsp;<a href='addpage.php?mode=edit&&page=$id&&template=$template'><img src='../images/edit.png' /></a>&nbsp;&nbsp;<a href='deletenotice.php?id=$id&&type=page&&confirm='><img src='../images/delete.png' /></a></li>";
 						}
 						echo "</ul>";
 					}
 					
 			?>
 			<?php 
-			getPageResults("","pages","pageId DESC");
+			getPageResults("","pages","page_id DESC");
 			?>
 			</div>
 		</div>

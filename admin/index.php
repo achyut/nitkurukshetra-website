@@ -1,28 +1,19 @@
 <?php
-	include("../template/adminheader.php");
+session_start();
+if(isset($_SESSION['user'])){
+header("location:index1.php");
+}
 ?>
 	<div class="belowContainer">
 		<div class="centerBox">
-			<div class="sideBar">
-				<ul class="sideNav">
-					<li><a href="#">Welcome!</a></li>	
-					<li><a href="#">Administrator</a></li>	
-				</ul>
-			</div> <!-- sidenav ends -->
-			<div class = "mainContent">	
-				<h1>NIT Kurukshetra Website Administrative Area</h1>
-					<a href="sitemap.php">Add/Edit Website</a><br/><br>
-					<a href="notices.php?type=scrollnews">Scroll News</a><br/>
-					<a href="notices.php?type=news">News feed</a><br/>
-					<a href="notices.php?type=event">Forth coming events</a><br/>
-					<a href="notices.php?type=notice">Notices</a><br/>
-					<a href="notices.php?type=stdact">Student activity</a><br/>
-					<a href="notices.php?type=tender">Tender</a><br/>
-					<a href="notices.php?type=interview">Walkin Interview</a><br/>
-					<a href="#"></a><br/>
-			</div>
+			<h1>Administrative area</h1>
+			<fieldset>
+				<legend>Login:</legend>
+				<form action="checklogin.php" method="post">
+				Username: <input type="text" size="30" name="user" required><br>
+				Password: <input type="password" size="30" name="pass" required><br>
+				<input type="submit" value="Login">
+				</form>
+			  </fieldset>
 		</div>
 	</div>
-<?php
-	include("../template/adminfooter.php");
-?>

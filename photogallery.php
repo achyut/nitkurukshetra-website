@@ -56,7 +56,8 @@
 			<?php displayAlbum("photo/extra"); ?>
 		</ul>
 		<p>&nbsp;</p>
-		
+	</div>
+	</div>
 <?php
 	include("template/footer.php");
 ?>

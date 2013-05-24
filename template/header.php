@@ -57,7 +57,17 @@ else{
 					<input type="submit" value="GO" />
 				</form>
 				<div class="topMenu">
-					<img src="images/icon_interview.png"/>&nbsp;&nbsp;<a href="notices.php?type=interview">RECRUITMENT</a>&nbsp;&nbsp;&nbsp;<img src="images/tender_bag.png"/>&nbsp;&nbsp;<a href="notices.php?type=tender">TENDERS</a>&nbsp;&nbsp;&nbsp;<img src="images/login.png"/>&nbsp;&nbsp;<a href="institute.php?page=48">LOGIN</a>
+					<img src="images/icon_interview.png"/>&nbsp;&nbsp;<a href="notices.php?type=interview">RECRUITMENT</a>&nbsp;&nbsp;&nbsp;<img src="images/tender_bag.png"/>&nbsp;&nbsp;<a href="notices.php?type=tender">TENDERS</a>&nbsp;&nbsp;&nbsp;<img src="images/login.png"/>&nbsp;&nbsp;<a href="institute.php?page=48">
+					<?php 
+					if(isset($_SESSION['id'])){
+					  echo "<a href='logout.php'>LOGOUT</a>";
+					}
+					else{
+					  echo "<a href='institute.php?page=48'>LOGIN</a>";
+					}
+					
+					
+					?>
 				</div>
 			</div>
 		</div>

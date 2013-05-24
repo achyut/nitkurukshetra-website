@@ -37,14 +37,17 @@
 			</div>
 			<div class="clear"></div>
 			<div class="infoData">
-			<h2>Area of Research:</h2><?php echo $data[10]; ?><br>
-			<h2>Industry Consultancy:</h2><?php echo $data[11]; ?><br>
-			<h2>Awards:</h2><?php echo $data[12]; ?><br>
-			<h2>Other Details:</h2><?php echo $data[13]; ?><br>
+			<h2>Area of Research:</h2>
+			<div class="facultyData">
+			  <?php echo $data[10]; ?>
+			</div>
+			<h2>Industry Consultancy:</h2><div class="facultyData"><?php echo $data[11]; ?></div>
+			<h2>Awards:</h2><div class="facultyData"><?php echo $data[12]; ?></div>
+			<h2>Other Details:</h2><div class="facultyData"><?php echo $data[13]; ?></div>
 			<br>
-			<strong>Office Phone Number:&nbsp;&nbsp;</strong><?php echo $data[6]; ?><br>
-			<strong>Mobile Number:&nbsp;&nbsp;</strong><?php echo $data[7]; ?><br>
-			<strong>E-mail Address:&nbsp;&nbsp;</strong><?php echo $data[8]; ?><br>
+			<strong>Office Phone Number:&nbsp;&nbsp;</strong><div class="facultyData"><?php echo $data[6]; ?></div>
+			<strong>Mobile Number:&nbsp;&nbsp;</strong><div class="facultyData"><?php echo $data[7]; ?></div>
+			<strong>E-mail Address:&nbsp;&nbsp;</strong><div class="facultyData"><?php echo $data[8]; ?></div>
 			</div>
 		<?php
 			}

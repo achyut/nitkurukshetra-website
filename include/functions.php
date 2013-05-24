@@ -220,7 +220,7 @@ function getAllUsers(){
 	while ($row = mysql_fetch_array($result, MYSQL_NUM)) {
 		$id = $row[0];
 		$user = $row[1];
-		$pass = "hidden";
+		$pass = "*****";
 		$addedby = $row[3];
 		echo "<li>$user &nbsp;&nbsp;&nbsp;&nbsp;$pass&nbsp;&nbsp;&nbsp;&nbsp;$addedby &nbsp;&nbsp;<a href='user.php?action=edit&&id=$id'><img src='../images/edit.png'/></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='user.php?action=delete&&id=$id'><img src='../images/delete.png'/></a></li>";
 	}
@@ -263,4 +263,9 @@ function clean_directory($input){
 }
 function escapeQuote($input){
 	return mysql_real_escape_string($input);
+}
+function updateFaculty($id,$name,$quali,$desg,$exp,$dep,$resadd,$rcharea,$indcst,$awd,$other,$offnum,$mobnum,$email){
+  $query = "update faculty set name='$name',quali='$quali',designation='$desg',department='$dep',radd='$resadd',phonen='$offnum',phone='$mobnum',email='$email',totlexp='$exp',research='$rcharea',ind_counseltancy='$indcst',awards='$awd',other='$other' where cdno=$id";
+  $result = executeQuery($query);
+  return $result;
 }

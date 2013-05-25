@@ -23,9 +23,9 @@ else{
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8" />
 	<title><?php echo $pageTitle;	?>NATIONAL INSTITUTE OF TECHNOLOGY,KURUKSHTERA</title>
 	<meta name="description" content="<?php echo $pageDesc; ?>">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta name="keywords" content="NIT KKR, NIT,NIT kurukshetra, Kurukshetra, National Institute of Technology, NITKKR,National Institute of Technology,kurukshetra" />
 	<meta name="author" content="Achyut Paudel (achyut.pdl[at]gmail.com)" />
 	<meta property="og:title" content="<?php echo $pageTitle;	?>NATIONAL INSTITUTE OF TECHNOLOGY,KURUKSHTERA" />
@@ -100,7 +100,7 @@ else{
 
                 <li><a href="institute.php?page=113">Finance Comtt.</a></li>
                 <li><a href="institute.php?page=114">Building &amp; Work</a></li>
-                <li><a href="Senate.pdf">Senate</a></li>
+                <li><a href="files/Senate.pdf">Senate</a></li>
                 <li><a href="institute.php?page=15">Chairperson</a></li>
                 <li><a href="institute.php?page=16">Director</a></li>
 
@@ -112,7 +112,7 @@ else{
 
             <ul>
               <li><a href="institute.php?page=20">Library</a></li>
-              <li><a href="sites/ccn/ccnnitk.htm">Center of Computing and Networking</a></li>
+              <li><a href="institute.php?page=189">Center of Computing and Networking</a></li>
               <li><a href="institute.php?page=21">Central Workshop</a></li>
               <li><a href="institute.php?page=22">Online Ph.D Thesis</a></li>
               <li><a href="institute.php?page=23">Hostels</a></li>
@@ -222,6 +222,7 @@ else{
               <li><a href="institute.php?page=50">M.Tech</a></li>
               <li><a href="institute.php?page=51">Ph.D</a></li>
               <li><a href="MBAProgram.htm">MBA</a></li>
+              <li><a href="institute.php?page=190">MCA</a></li>
             </ul>
           </li>
           <li><a href="institute.php?page=53">Exam and Evaluation</a></li>
@@ -287,7 +288,15 @@ else{
           
         </ul>
       </li>
-      <li><a href="institute.php?page=121">OTHER NITS</a></li>
+      <li><a href="institute.php?page=121">ADMISSIONS</a>
+		<ul class="drop">
+	              <li><a href="#">B.TECH</a></li>
+				  <li><a href="#">M.TECH</a></li>
+				  <li><a href="#">Ph.D</a></li>
+				  <li><a href="#">MBA</a></li>
+				  <li><a href="#">MCA</a></li>
+		</ul>
+      </li>
     </ul>
     <div class="clear"></div>
 	</div>

@@ -10,28 +10,35 @@
 		<?php
 		function displayAlbum($path){
 		if ($handle = opendir($path)) {
-			while (false !== ($entry = readdir($handle))) {
-				if ($entry != "." && $entry != ".." && $entry != "Thumbs.db") { 
-					echo"<li><a href='photos.php?album=$path/$entry'>";
-					if ($handle1 = opendir("$path/".$entry)) {
+		  $files = array();
+		  while ($files[] = readdir($handle));
+		  sort($files);
+	
+		foreach ($files as $file) {
+	  
+				//MANIPULATE FILENAME HERE, YOU HAVE $file...
+				if ($file != "." && $file != ".." && $file!="Thumbs.db" && $file != false){
+				  
+				 echo"<li><a href='photos.php?album=$path/$file'>";
+					if ($handle1 = opendir("$path/".$file)) {
 						$loop = 0;
 						while (false !== ($entry1 = readdir($handle1)) && $loop!==1) {
 							if ($entry1 != "." && $entry1 != ".." && $entry1 != "Thumbs.db") {
-								echo"<img src='$path/$entry/$entry1' />";
+								echo"<img src='$path/$file/$entry1' />";
 								$loop++;
 							}
 						}
 						closedir($handle1);
 					}
-					echo"</a><span>$entry</span></li>";
+					echo"</a><span>$file</span></li>";
 				}
-			}
+		  }
 			closedir($handle);
 		}
 		}
 
 		?>
-		<h2>Photos of college and surroundings</h2>
+		<h2>Photos of institute and surroundings</h2>
 		<ul class="albumList">
 			<?php displayAlbum("photo/college"); ?>
 		</ul>

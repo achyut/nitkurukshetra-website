@@ -67,17 +67,17 @@ function clean_directory($input){
 		if (is_dir($dir)) {
 
 			if ($handle = opendir($dir)) {
-		?>
-				
-		<?php
-				while (false !== ($entry = readdir($handle))) {
-					if ($entry != "." && $entry != ".." && $entry != "Thumbs.db") { 
-						echo"{image :'$dir/$entry',title :'$entry'},";
-					}
+			  $files = array();
+			  while ($files[] = readdir($handle));
+			  sort($files);
+			  closedir($handle);
+			  foreach ($files as $file) {
+			  if ($file != "." && $file != ".." && $file != "Thumbs.db" && $file != false) {
+				  echo "{image :'$dir/$file',title :'$file'},";
 				}
-				echo "{image :'images/$entry',title :'$entry'}";
-				closedir($handle);
+			  }
 			}
+			echo"{image :'images/logo.png',title :'NIT Kurukshetra'}";
 		
 		}
 		

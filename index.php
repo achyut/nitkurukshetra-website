@@ -3,11 +3,12 @@
 	include("template/header.php");
 ?>
 	<div id="slider" class="slideShowContainer">
+		<div><a href="sites/old/index1.html"><img src="images/golden.jpg" /></a></div>
 		<div><img src="images/pic4.jpg" /></div>
 		<div><img src="images/pic7.jpg" /></div>	
 		<div><img src="images/pic3.jpg" /></div>
 		<div><img src="images/pic1.jpg" /></div>
-		<div><img src="images/pic10.jpg" /></div>
+		<div><img src="images/NITKKR_HOSTEL.jpg" /></div>
 		<div><img src="images/pic9_1.jpg" /></div>
 		<div><img src="images/pic7_1.jpg" /></div>
 		
